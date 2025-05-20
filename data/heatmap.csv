@@ -1,0 +1,666 @@
+"JURISDICTION","AGE_GROUP","MONTH","LOCATION","Sum(FINES)","Sum(ARRESTS)","Sum(CHARGES)"
+"ACT","0-16","April","Major Cities of Australia",2,0,0
+"ACT","0-16","June","Major Cities of Australia",2,0,0
+"ACT","0-16","March","Major Cities of Australia",1,0,0
+"ACT","0-16","May","Major Cities of Australia",3,0,0
+"ACT","0-16","November","Major Cities of Australia",1,0,0
+"ACT","0-16","October","Major Cities of Australia",1,0,0
+"ACT","17-25","April","Major Cities of Australia",7,0,0
+"ACT","17-25","August","Major Cities of Australia",9,0,0
+"ACT","17-25","December","Major Cities of Australia",4,0,0
+"ACT","17-25","February","Major Cities of Australia",7,0,0
+"ACT","17-25","January","Major Cities of Australia",8,0,0
+"ACT","17-25","July","Major Cities of Australia",10,0,0
+"ACT","17-25","June","Major Cities of Australia",5,0,0
+"ACT","17-25","March","Major Cities of Australia",12,0,0
+"ACT","17-25","May","Major Cities of Australia",5,0,0
+"ACT","17-25","November","Major Cities of Australia",6,0,0
+"ACT","17-25","October","Major Cities of Australia",4,0,0
+"ACT","17-25","September","Major Cities of Australia",5,0,0
+"ACT","26-39","April","Major Cities of Australia",11,0,0
+"ACT","26-39","August","Major Cities of Australia",8,0,0
+"ACT","26-39","December","Major Cities of Australia",3,0,0
+"ACT","26-39","February","Major Cities of Australia",8,0,0
+"ACT","26-39","January","Major Cities of Australia",8,0,0
+"ACT","26-39","July","Major Cities of Australia",8,0,0
+"ACT","26-39","June","Major Cities of Australia",9,0,0
+"ACT","26-39","March","Major Cities of Australia",14,0,0
+"ACT","26-39","May","Major Cities of Australia",9,0,0
+"ACT","26-39","November","Major Cities of Australia",7,0,0
+"ACT","26-39","October","Major Cities of Australia",15,0,0
+"ACT","26-39","September","Major Cities of Australia",10,0,0
+"ACT","40-64","April","Major Cities of Australia",6,0,0
+"ACT","40-64","August","Major Cities of Australia",6,0,0
+"ACT","40-64","December","Major Cities of Australia",1,0,0
+"ACT","40-64","February","Major Cities of Australia",12,0,0
+"ACT","40-64","January","Major Cities of Australia",12,0,0
+"ACT","40-64","July","Major Cities of Australia",6,0,0
+"ACT","40-64","June","Major Cities of Australia",7,0,0
+"ACT","40-64","March","Major Cities of Australia",1,0,0
+"ACT","40-64","May","Major Cities of Australia",8,0,0
+"ACT","40-64","November","Major Cities of Australia",5,0,0
+"ACT","40-64","October","Major Cities of Australia",5,0,0
+"ACT","40-64","September","Major Cities of Australia",10,0,0
+"ACT","65 and over","April","Major Cities of Australia",2,0,0
+"ACT","65 and over","December","Major Cities of Australia",1,0,0
+"ACT","65 and over","February","Major Cities of Australia",1,0,0
+"ACT","65 and over","July","Major Cities of Australia",1,0,0
+"ACT","65 and over","November","Major Cities of Australia",1,0,0
+"ACT","65 and over","September","Major Cities of Australia",1,0,0
+"NSW","0-16","April","Inner Regional Australia",1,0,0
+"NSW","0-16","April","Major Cities of Australia",1,0,0
+"NSW","0-16","August","Inner Regional Australia",2,0,0
+"NSW","0-16","August","Major Cities of Australia",1,0,1
+"NSW","0-16","December","Inner Regional Australia",2,0,0
+"NSW","0-16","December","Major Cities of Australia",2,0,0
+"NSW","0-16","May","Inner Regional Australia",2,0,0
+"NSW","0-16","May","Outer Regional Australia",0,0,1
+"NSW","0-16","November","Inner Regional Australia",3,0,0
+"NSW","0-16","November","Major Cities of Australia",1,0,0
+"NSW","0-16","October","Major Cities of Australia",1,0,0
+"NSW","0-16","September","Inner Regional Australia",1,0,0
+"NSW","0-16","September","Major Cities of Australia",1,0,0
+"NSW","17-25","April","Inner Regional Australia",39,0,0
+"NSW","17-25","April","Major Cities of Australia",348,0,2
+"NSW","17-25","April","Outer Regional Australia",4,0,0
+"NSW","17-25","April","Unknown",1,0,0
+"NSW","17-25","April","Very Remote Australia",1,0,0
+"NSW","17-25","August","Inner Regional Australia",35,0,2
+"NSW","17-25","August","Major Cities of Australia",298,0,2
+"NSW","17-25","August","Outer Regional Australia",4,0,0
+"NSW","17-25","August","Unknown",4,0,0
+"NSW","17-25","December","Inner Regional Australia",48,0,1
+"NSW","17-25","December","Major Cities of Australia",340,0,9
+"NSW","17-25","December","Outer Regional Australia",10,0,0
+"NSW","17-25","December","Unknown",33,0,0
+"NSW","17-25","December","Very Remote Australia",1,0,0
+"NSW","17-25","February","Inner Regional Australia",48,0,1
+"NSW","17-25","February","Major Cities of Australia",278,0,3
+"NSW","17-25","February","Outer Regional Australia",4,0,1
+"NSW","17-25","January","Inner Regional Australia",55,0,0
+"NSW","17-25","January","Major Cities of Australia",270,0,5
+"NSW","17-25","January","Outer Regional Australia",6,0,0
+"NSW","17-25","July","Inner Regional Australia",38,0,1
+"NSW","17-25","July","Major Cities of Australia",253,0,3
+"NSW","17-25","July","Outer Regional Australia",5,0,0
+"NSW","17-25","July","Remote Australia",0,0,1
+"NSW","17-25","June","Inner Regional Australia",48,0,1
+"NSW","17-25","June","Major Cities of Australia",338,0,1
+"NSW","17-25","June","Outer Regional Australia",5,0,0
+"NSW","17-25","June","Unknown",2,0,0
+"NSW","17-25","March","Inner Regional Australia",37,0,0
+"NSW","17-25","March","Major Cities of Australia",283,0,3
+"NSW","17-25","March","Outer Regional Australia",6,0,1
+"NSW","17-25","May","Inner Regional Australia",36,0,0
+"NSW","17-25","May","Major Cities of Australia",330,0,6
+"NSW","17-25","May","Outer Regional Australia",3,0,0
+"NSW","17-25","May","Unknown",2,0,0
+"NSW","17-25","November","Inner Regional Australia",53,0,0
+"NSW","17-25","November","Major Cities of Australia",237,0,5
+"NSW","17-25","November","Outer Regional Australia",4,0,1
+"NSW","17-25","November","Remote Australia",1,0,0
+"NSW","17-25","November","Unknown",1,0,0
+"NSW","17-25","October","Inner Regional Australia",49,0,1
+"NSW","17-25","October","Major Cities of Australia",264,0,1
+"NSW","17-25","October","Outer Regional Australia",10,0,0
+"NSW","17-25","October","Remote Australia",2,0,0
+"NSW","17-25","October","Unknown",2,0,0
+"NSW","17-25","September","Inner Regional Australia",35,0,0
+"NSW","17-25","September","Major Cities of Australia",257,0,5
+"NSW","17-25","September","Outer Regional Australia",12,0,0
+"NSW","17-25","September","Unknown",1,0,0
+"NSW","26-39","April","Inner Regional Australia",68,0,1
+"NSW","26-39","April","Major Cities of Australia",384,0,6
+"NSW","26-39","April","Outer Regional Australia",9,0,0
+"NSW","26-39","August","Inner Regional Australia",39,0,0
+"NSW","26-39","August","Major Cities of Australia",298,0,8
+"NSW","26-39","August","Outer Regional Australia",12,0,0
+"NSW","26-39","August","Remote Australia",1,0,0
+"NSW","26-39","August","Unknown",1,0,0
+"NSW","26-39","December","Inner Regional Australia",55,0,0
+"NSW","26-39","December","Major Cities of Australia",338,0,0
+"NSW","26-39","December","Outer Regional Australia",8,0,0
+"NSW","26-39","December","Unknown",57,0,1
+"NSW","26-39","February","Inner Regional Australia",54,0,1
+"NSW","26-39","February","Major Cities of Australia",423,0,10
+"NSW","26-39","February","Outer Regional Australia",13,0,1
+"NSW","26-39","January","Inner Regional Australia",54,0,1
+"NSW","26-39","January","Major Cities of Australia",335,0,6
+"NSW","26-39","January","Outer Regional Australia",8,0,0
+"NSW","26-39","January","Unknown",1,0,0
+"NSW","26-39","July","Inner Regional Australia",41,0,0
+"NSW","26-39","July","Major Cities of Australia",316,0,6
+"NSW","26-39","July","Outer Regional Australia",8,0,0
+"NSW","26-39","June","Inner Regional Australia",71,0,0
+"NSW","26-39","June","Major Cities of Australia",401,0,7
+"NSW","26-39","June","Outer Regional Australia",6,0,0
+"NSW","26-39","June","Remote Australia",2,0,0
+"NSW","26-39","March","Inner Regional Australia",67,0,0
+"NSW","26-39","March","Major Cities of Australia",405,0,5
+"NSW","26-39","March","Outer Regional Australia",13,0,0
+"NSW","26-39","March","Remote Australia",2,0,0
+"NSW","26-39","May","Inner Regional Australia",47,0,2
+"NSW","26-39","May","Major Cities of Australia",356,0,3
+"NSW","26-39","May","Outer Regional Australia",13,0,0
+"NSW","26-39","May","Remote Australia",1,0,0
+"NSW","26-39","May","Unknown",2,0,0
+"NSW","26-39","November","Inner Regional Australia",67,0,0
+"NSW","26-39","November","Major Cities of Australia",302,0,2
+"NSW","26-39","November","Outer Regional Australia",9,0,0
+"NSW","26-39","November","Remote Australia",3,0,0
+"NSW","26-39","October","Inner Regional Australia",62,0,1
+"NSW","26-39","October","Major Cities of Australia",336,0,7
+"NSW","26-39","October","Outer Regional Australia",7,0,0
+"NSW","26-39","October","Remote Australia",2,0,0
+"NSW","26-39","October","Unknown",4,0,0
+"NSW","26-39","October","Very Remote Australia",1,0,0
+"NSW","26-39","September","Inner Regional Australia",55,0,1
+"NSW","26-39","September","Major Cities of Australia",290,0,12
+"NSW","26-39","September","Outer Regional Australia",8,0,0
+"NSW","40-64","April","Inner Regional Australia",38,0,0
+"NSW","40-64","April","Major Cities of Australia",257,0,2
+"NSW","40-64","April","Outer Regional Australia",6,0,0
+"NSW","40-64","August","Inner Regional Australia",33,0,0
+"NSW","40-64","August","Major Cities of Australia",227,0,3
+"NSW","40-64","August","Outer Regional Australia",4,0,0
+"NSW","40-64","August","Very Remote Australia",1,0,0
+"NSW","40-64","December","Inner Regional Australia",38,0,0
+"NSW","40-64","December","Major Cities of Australia",223,0,6
+"NSW","40-64","December","Outer Regional Australia",6,0,0
+"NSW","40-64","December","Unknown",26,0,1
+"NSW","40-64","February","Inner Regional Australia",61,0,0
+"NSW","40-64","February","Major Cities of Australia",308,0,0
+"NSW","40-64","February","Outer Regional Australia",10,0,0
+"NSW","40-64","February","Unknown",1,0,0
+"NSW","40-64","January","Inner Regional Australia",43,0,1
+"NSW","40-64","January","Major Cities of Australia",200,0,4
+"NSW","40-64","January","Outer Regional Australia",9,0,0
+"NSW","40-64","January","Remote Australia",1,0,0
+"NSW","40-64","July","Inner Regional Australia",26,0,0
+"NSW","40-64","July","Major Cities of Australia",260,0,2
+"NSW","40-64","July","Outer Regional Australia",5,0,0
+"NSW","40-64","July","Remote Australia",1,0,0
+"NSW","40-64","June","Inner Regional Australia",60,0,0
+"NSW","40-64","June","Major Cities of Australia",333,0,4
+"NSW","40-64","June","Outer Regional Australia",12,0,0
+"NSW","40-64","June","Unknown",1,0,0
+"NSW","40-64","June","Very Remote Australia",1,0,0
+"NSW","40-64","March","Inner Regional Australia",51,0,0
+"NSW","40-64","March","Major Cities of Australia",303,0,4
+"NSW","40-64","March","Outer Regional Australia",11,0,0
+"NSW","40-64","May","Inner Regional Australia",35,0,2
+"NSW","40-64","May","Major Cities of Australia",267,0,2
+"NSW","40-64","May","Outer Regional Australia",9,0,0
+"NSW","40-64","November","Inner Regional Australia",59,0,0
+"NSW","40-64","November","Major Cities of Australia",237,0,2
+"NSW","40-64","November","Outer Regional Australia",8,0,0
+"NSW","40-64","October","Inner Regional Australia",40,0,0
+"NSW","40-64","October","Major Cities of Australia",225,0,5
+"NSW","40-64","October","Outer Regional Australia",9,0,0
+"NSW","40-64","September","Inner Regional Australia",43,0,5
+"NSW","40-64","September","Major Cities of Australia",195,0,4
+"NSW","40-64","September","Outer Regional Australia",9,0,0
+"NSW","65 and over","April","Inner Regional Australia",5,0,0
+"NSW","65 and over","April","Major Cities of Australia",31,0,0
+"NSW","65 and over","April","Outer Regional Australia",1,0,0
+"NSW","65 and over","August","Inner Regional Australia",7,0,0
+"NSW","65 and over","August","Major Cities of Australia",14,0,0
+"NSW","65 and over","August","Outer Regional Australia",3,0,0
+"NSW","65 and over","December","Inner Regional Australia",5,0,0
+"NSW","65 and over","December","Major Cities of Australia",29,0,1
+"NSW","65 and over","December","Outer Regional Australia",1,0,0
+"NSW","65 and over","December","Unknown",2,0,0
+"NSW","65 and over","February","Inner Regional Australia",4,0,0
+"NSW","65 and over","February","Major Cities of Australia",28,0,0
+"NSW","65 and over","January","Inner Regional Australia",6,0,0
+"NSW","65 and over","January","Major Cities of Australia",31,0,0
+"NSW","65 and over","January","Outer Regional Australia",1,0,0
+"NSW","65 and over","July","Inner Regional Australia",4,0,0
+"NSW","65 and over","July","Major Cities of Australia",19,0,0
+"NSW","65 and over","July","Outer Regional Australia",2,0,0
+"NSW","65 and over","June","Inner Regional Australia",6,0,0
+"NSW","65 and over","June","Major Cities of Australia",24,0,0
+"NSW","65 and over","June","Outer Regional Australia",1,0,0
+"NSW","65 and over","March","Inner Regional Australia",5,0,0
+"NSW","65 and over","March","Major Cities of Australia",23,0,0
+"NSW","65 and over","March","Outer Regional Australia",2,0,0
+"NSW","65 and over","May","Inner Regional Australia",8,0,0
+"NSW","65 and over","May","Major Cities of Australia",40,0,0
+"NSW","65 and over","May","Remote Australia",1,0,0
+"NSW","65 and over","November","Inner Regional Australia",5,0,0
+"NSW","65 and over","November","Major Cities of Australia",28,0,0
+"NSW","65 and over","October","Inner Regional Australia",2,0,0
+"NSW","65 and over","October","Major Cities of Australia",15,0,0
+"NSW","65 and over","October","Unknown",1,0,0
+"NSW","65 and over","September","Inner Regional Australia",5,0,0
+"NSW","65 and over","September","Major Cities of Australia",19,0,0
+"NSW","65 and over","September","Remote Australia",1,0,0
+"NSW","Unknown","April","Unknown",16973,0,0
+"NSW","Unknown","August","Unknown",16242,0,0
+"NSW","Unknown","December","Unknown",15188,0,0
+"NSW","Unknown","February","Unknown",18057,0,0
+"NSW","Unknown","January","Unknown",17080,0,0
+"NSW","Unknown","July","Unknown",16377,0,0
+"NSW","Unknown","June","Unknown",16286,0,0
+"NSW","Unknown","March","Unknown",20102,0,0
+"NSW","Unknown","May","Unknown",19048,0,0
+"NSW","Unknown","November","Unknown",15466,0,0
+"NSW","Unknown","October","Unknown",15740,0,0
+"NSW","Unknown","September","Unknown",16198,0,0
+"NT","17-25","April","Unknown",2,0,0
+"NT","17-25","August","Unknown",2,1,1
+"NT","17-25","December","Unknown",6,0,1
+"NT","17-25","February","Unknown",5,0,0
+"NT","17-25","January","Unknown",3,0,0
+"NT","17-25","July","Unknown",1,1,1
+"NT","17-25","June","Unknown",1,0,1
+"NT","17-25","March","Unknown",4,0,0
+"NT","17-25","May","Unknown",4,0,0
+"NT","17-25","November","Unknown",4,0,1
+"NT","17-25","October","Unknown",5,0,1
+"NT","17-25","September","Unknown",4,0,0
+"NT","26-39","April","Unknown",11,0,0
+"NT","26-39","August","Unknown",6,0,0
+"NT","26-39","December","Unknown",12,0,1
+"NT","26-39","February","Unknown",6,0,0
+"NT","26-39","January","Unknown",7,0,0
+"NT","26-39","July","Unknown",9,0,0
+"NT","26-39","June","Unknown",2,0,0
+"NT","26-39","March","Unknown",6,0,0
+"NT","26-39","May","Unknown",10,0,0
+"NT","26-39","November","Unknown",7,1,1
+"NT","26-39","October","Unknown",8,0,0
+"NT","26-39","September","Unknown",6,0,0
+"NT","40-64","April","Unknown",3,0,0
+"NT","40-64","August","Unknown",10,0,0
+"NT","40-64","December","Unknown",7,0,0
+"NT","40-64","February","Unknown",5,0,0
+"NT","40-64","January","Unknown",8,0,0
+"NT","40-64","July","Unknown",4,0,0
+"NT","40-64","June","Unknown",6,0,0
+"NT","40-64","March","Unknown",5,0,0
+"NT","40-64","May","Unknown",3,0,0
+"NT","40-64","November","Unknown",6,0,0
+"NT","40-64","October","Unknown",5,0,0
+"NT","40-64","September","Unknown",2,0,0
+"NT","65 and over","April","Unknown",0,0,1
+"NT","65 and over","August","Unknown",2,0,0
+"NT","65 and over","December","Unknown",1,1,1
+"NT","65 and over","January","Unknown",3,0,0
+"NT","65 and over","June","Unknown",0,1,1
+"NT","65 and over","March","Unknown",0,0,2
+"NT","65 and over","May","Unknown",1,0,1
+"NT","65 and over","November","Unknown",1,0,0
+"NT","65 and over","October","Unknown",1,0,0
+"NT","65 and over","September","Unknown",1,0,0
+"QLD","Unknown","December","Unknown",80292,0,0
+"SA","0-16","April","Unknown",0,0,0
+"SA","0-16","August","Unknown",0,0,0
+"SA","0-16","December","Unknown",0,0,0
+"SA","0-16","February","Unknown",0,0,0
+"SA","0-16","January","Unknown",1,0,0
+"SA","0-16","July","Unknown",0,0,0
+"SA","0-16","June","Unknown",2,0,0
+"SA","0-16","March","Unknown",0,0,0
+"SA","0-16","May","Unknown",0,0,0
+"SA","0-16","November","Unknown",0,0,0
+"SA","0-16","October","Unknown",0,0,0
+"SA","0-16","September","Unknown",0,0,0
+"SA","17-25","April","Unknown",122,0,0
+"SA","17-25","August","Unknown",108,0,0
+"SA","17-25","December","Unknown",104,0,0
+"SA","17-25","February","Unknown",150,0,0
+"SA","17-25","January","Unknown",106,0,0
+"SA","17-25","July","Unknown",109,0,0
+"SA","17-25","June","Unknown",102,0,0
+"SA","17-25","March","Unknown",153,0,0
+"SA","17-25","May","Unknown",105,0,0
+"SA","17-25","November","Unknown",104,0,0
+"SA","17-25","October","Unknown",117,0,0
+"SA","17-25","September","Unknown",107,0,0
+"SA","26-39","April","Unknown",184,0,0
+"SA","26-39","August","Unknown",187,0,0
+"SA","26-39","December","Unknown",158,0,0
+"SA","26-39","February","Unknown",239,0,0
+"SA","26-39","January","Unknown",182,0,0
+"SA","26-39","July","Unknown",194,0,0
+"SA","26-39","June","Unknown",182,0,0
+"SA","26-39","March","Unknown",228,0,0
+"SA","26-39","May","Unknown",194,0,0
+"SA","26-39","November","Unknown",177,0,0
+"SA","26-39","October","Unknown",169,0,0
+"SA","26-39","September","Unknown",178,0,0
+"SA","40-64","April","Unknown",135,0,0
+"SA","40-64","August","Unknown",148,0,0
+"SA","40-64","December","Unknown",120,0,0
+"SA","40-64","February","Unknown",177,0,0
+"SA","40-64","January","Unknown",117,0,0
+"SA","40-64","July","Unknown",146,0,0
+"SA","40-64","June","Unknown",131,0,0
+"SA","40-64","March","Unknown",198,0,0
+"SA","40-64","May","Unknown",187,0,0
+"SA","40-64","November","Unknown",139,0,0
+"SA","40-64","October","Unknown",136,0,0
+"SA","40-64","September","Unknown",171,0,0
+"SA","65 and over","April","Unknown",25,0,0
+"SA","65 and over","August","Unknown",29,0,0
+"SA","65 and over","December","Unknown",21,0,0
+"SA","65 and over","February","Unknown",24,0,0
+"SA","65 and over","January","Unknown",20,0,0
+"SA","65 and over","July","Unknown",18,0,0
+"SA","65 and over","June","Unknown",20,0,0
+"SA","65 and over","March","Unknown",34,0,0
+"SA","65 and over","May","Unknown",20,0,0
+"SA","65 and over","November","Unknown",21,0,0
+"SA","65 and over","October","Unknown",33,0,0
+"SA","65 and over","September","Unknown",37,0,0
+"SA","Unknown","April","Unknown",0,0,0
+"SA","Unknown","August","Unknown",0,0,0
+"SA","Unknown","December","Unknown",0,0,0
+"SA","Unknown","February","Unknown",0,0,0
+"SA","Unknown","January","Unknown",0,0,0
+"SA","Unknown","July","Unknown",0,0,0
+"SA","Unknown","June","Unknown",0,0,0
+"SA","Unknown","March","Unknown",0,0,0
+"SA","Unknown","May","Unknown",0,0,0
+"SA","Unknown","November","Unknown",0,0,0
+"SA","Unknown","October","Unknown",0,0,0
+"SA","Unknown","September","Unknown",0,0,0
+"TAS","0-16","February","Unknown",0,0,0
+"TAS","17-25","April","Unknown",32,0,2
+"TAS","17-25","August","Unknown",30,0,1
+"TAS","17-25","December","Unknown",34,0,0
+"TAS","17-25","February","Unknown",29,0,0
+"TAS","17-25","January","Unknown",27,0,0
+"TAS","17-25","July","Unknown",28,0,0
+"TAS","17-25","June","Unknown",29,0,1
+"TAS","17-25","March","Unknown",44,0,1
+"TAS","17-25","May","Unknown",29,0,1
+"TAS","17-25","November","Unknown",63,0,6
+"TAS","17-25","October","Unknown",62,0,1
+"TAS","17-25","September","Unknown",33,0,0
+"TAS","26-39","April","Unknown",70,0,1
+"TAS","26-39","August","Unknown",66,0,2
+"TAS","26-39","December","Unknown",111,0,2
+"TAS","26-39","February","Unknown",43,0,4
+"TAS","26-39","January","Unknown",63,0,4
+"TAS","26-39","July","Unknown",51,0,1
+"TAS","26-39","June","Unknown",54,0,0
+"TAS","26-39","March","Unknown",44,0,2
+"TAS","26-39","May","Unknown",68,0,1
+"TAS","26-39","November","Unknown",201,0,2
+"TAS","26-39","October","Unknown",164,0,0
+"TAS","26-39","September","Unknown",82,0,2
+"TAS","40-64","April","Unknown",44,0,0
+"TAS","40-64","August","Unknown",51,0,0
+"TAS","40-64","December","Unknown",78,0,0
+"TAS","40-64","February","Unknown",35,0,0
+"TAS","40-64","January","Unknown",28,0,1
+"TAS","40-64","July","Unknown",42,0,1
+"TAS","40-64","June","Unknown",44,0,0
+"TAS","40-64","March","Unknown",34,0,0
+"TAS","40-64","May","Unknown",42,0,0
+"TAS","40-64","November","Unknown",196,0,1
+"TAS","40-64","October","Unknown",157,0,0
+"TAS","40-64","September","Unknown",86,0,0
+"TAS","65 and over","April","Unknown",4,0,0
+"TAS","65 and over","August","Unknown",8,0,0
+"TAS","65 and over","December","Unknown",19,0,0
+"TAS","65 and over","February","Unknown",5,0,0
+"TAS","65 and over","January","Unknown",7,0,0
+"TAS","65 and over","July","Unknown",12,0,0
+"TAS","65 and over","June","Unknown",6,0,0
+"TAS","65 and over","March","Unknown",6,0,0
+"TAS","65 and over","May","Unknown",6,0,0
+"TAS","65 and over","November","Unknown",27,0,0
+"TAS","65 and over","October","Unknown",21,0,0
+"TAS","65 and over","September","Unknown",13,0,0
+"VIC","0-16","December","Major Cities of Australia",1,0,0
+"VIC","0-16","February","Inner Regional Australia",1,0,0
+"VIC","0-16","January","Inner Regional Australia",1,0,0
+"VIC","0-16","January","Major Cities of Australia",1,0,0
+"VIC","0-16","July","Major Cities of Australia",1,0,0
+"VIC","0-16","March","Major Cities of Australia",1,0,0
+"VIC","17-25","April","Inner Regional Australia",21,0,0
+"VIC","17-25","April","Major Cities of Australia",232,0,0
+"VIC","17-25","April","Outer Regional Australia",5,0,0
+"VIC","17-25","August","Inner Regional Australia",36,0,0
+"VIC","17-25","August","Major Cities of Australia",246,0,0
+"VIC","17-25","August","Outer Regional Australia",11,0,0
+"VIC","17-25","August","Unknown",5,0,0
+"VIC","17-25","December","Inner Regional Australia",151,0,0
+"VIC","17-25","December","Major Cities of Australia",479,0,0
+"VIC","17-25","December","Outer Regional Australia",6,0,0
+"VIC","17-25","December","Unknown",1,0,0
+"VIC","17-25","February","Inner Regional Australia",26,0,0
+"VIC","17-25","February","Major Cities of Australia",248,0,0
+"VIC","17-25","February","Outer Regional Australia",2,0,0
+"VIC","17-25","January","Inner Regional Australia",47,0,0
+"VIC","17-25","January","Major Cities of Australia",298,0,0
+"VIC","17-25","January","Outer Regional Australia",7,0,0
+"VIC","17-25","July","Inner Regional Australia",30,0,0
+"VIC","17-25","July","Major Cities of Australia",216,0,0
+"VIC","17-25","July","Outer Regional Australia",7,0,0
+"VIC","17-25","July","Unknown",4,0,0
+"VIC","17-25","June","Inner Regional Australia",24,0,0
+"VIC","17-25","June","Major Cities of Australia",196,0,0
+"VIC","17-25","June","Outer Regional Australia",6,0,0
+"VIC","17-25","June","Unknown",3,0,0
+"VIC","17-25","March","Inner Regional Australia",55,0,0
+"VIC","17-25","March","Major Cities of Australia",309,0,0
+"VIC","17-25","March","Outer Regional Australia",11,0,0
+"VIC","17-25","May","Inner Regional Australia",30,0,0
+"VIC","17-25","May","Major Cities of Australia",252,0,0
+"VIC","17-25","May","Outer Regional Australia",10,0,0
+"VIC","17-25","May","Unknown",1,0,0
+"VIC","17-25","November","Inner Regional Australia",67,0,0
+"VIC","17-25","November","Major Cities of Australia",511,0,0
+"VIC","17-25","November","Outer Regional Australia",5,0,0
+"VIC","17-25","November","Unknown",11,0,0
+"VIC","17-25","October","Inner Regional Australia",75,0,0
+"VIC","17-25","October","Major Cities of Australia",489,0,0
+"VIC","17-25","October","Outer Regional Australia",8,0,0
+"VIC","17-25","September","Inner Regional Australia",30,0,0
+"VIC","17-25","September","Major Cities of Australia",256,0,0
+"VIC","17-25","September","Outer Regional Australia",12,0,0
+"VIC","17-25","September","Unknown",1,0,0
+"VIC","26-39","April","Inner Regional Australia",56,0,0
+"VIC","26-39","April","Major Cities of Australia",608,0,0
+"VIC","26-39","April","Outer Regional Australia",9,0,0
+"VIC","26-39","April","Unknown",2,0,0
+"VIC","26-39","August","Inner Regional Australia",72,0,0
+"VIC","26-39","August","Major Cities of Australia",686,0,0
+"VIC","26-39","August","Outer Regional Australia",28,0,0
+"VIC","26-39","August","Unknown",4,0,0
+"VIC","26-39","December","Inner Regional Australia",543,0,0
+"VIC","26-39","December","Major Cities of Australia",1820,0,0
+"VIC","26-39","December","Outer Regional Australia",9,0,0
+"VIC","26-39","December","Unknown",8,0,0
+"VIC","26-39","February","Inner Regional Australia",55,0,0
+"VIC","26-39","February","Major Cities of Australia",586,0,0
+"VIC","26-39","February","Outer Regional Australia",12,0,0
+"VIC","26-39","February","Unknown",2,0,0
+"VIC","26-39","January","Inner Regional Australia",55,0,0
+"VIC","26-39","January","Major Cities of Australia",654,0,0
+"VIC","26-39","January","Outer Regional Australia",11,0,0
+"VIC","26-39","January","Unknown",2,0,0
+"VIC","26-39","July","Inner Regional Australia",59,0,0
+"VIC","26-39","July","Major Cities of Australia",520,0,0
+"VIC","26-39","July","Outer Regional Australia",10,0,0
+"VIC","26-39","July","Unknown",9,0,0
+"VIC","26-39","June","Inner Regional Australia",61,0,0
+"VIC","26-39","June","Major Cities of Australia",465,0,0
+"VIC","26-39","June","Outer Regional Australia",13,0,0
+"VIC","26-39","June","Unknown",6,0,0
+"VIC","26-39","March","Inner Regional Australia",74,0,0
+"VIC","26-39","March","Major Cities of Australia",646,0,0
+"VIC","26-39","March","Outer Regional Australia",29,0,0
+"VIC","26-39","May","Inner Regional Australia",93,0,0
+"VIC","26-39","May","Major Cities of Australia",518,0,0
+"VIC","26-39","May","Outer Regional Australia",21,0,0
+"VIC","26-39","May","Unknown",1,0,0
+"VIC","26-39","November","Inner Regional Australia",274,0,0
+"VIC","26-39","November","Major Cities of Australia",2047,0,0
+"VIC","26-39","November","Outer Regional Australia",26,0,0
+"VIC","26-39","November","Unknown",82,0,0
+"VIC","26-39","October","Inner Regional Australia",242,0,0
+"VIC","26-39","October","Major Cities of Australia",2031,0,0
+"VIC","26-39","October","Outer Regional Australia",12,0,0
+"VIC","26-39","October","Unknown",9,0,0
+"VIC","26-39","September","Inner Regional Australia",65,0,0
+"VIC","26-39","September","Major Cities of Australia",608,0,0
+"VIC","26-39","September","Outer Regional Australia",13,0,0
+"VIC","26-39","September","Unknown",6,0,0
+"VIC","40-64","April","Inner Regional Australia",68,0,0
+"VIC","40-64","April","Major Cities of Australia",455,0,0
+"VIC","40-64","April","Outer Regional Australia",6,0,0
+"VIC","40-64","April","Unknown",1,0,0
+"VIC","40-64","August","Inner Regional Australia",57,0,0
+"VIC","40-64","August","Major Cities of Australia",546,0,0
+"VIC","40-64","August","Outer Regional Australia",22,0,0
+"VIC","40-64","August","Unknown",7,0,0
+"VIC","40-64","December","Inner Regional Australia",622,0,0
+"VIC","40-64","December","Major Cities of Australia",1964,0,0
+"VIC","40-64","December","Outer Regional Australia",10,0,0
+"VIC","40-64","December","Unknown",2,0,0
+"VIC","40-64","February","Inner Regional Australia",40,0,0
+"VIC","40-64","February","Major Cities of Australia",445,0,0
+"VIC","40-64","February","Outer Regional Australia",8,0,0
+"VIC","40-64","February","Unknown",1,0,0
+"VIC","40-64","January","Inner Regional Australia",41,0,0
+"VIC","40-64","January","Major Cities of Australia",406,0,0
+"VIC","40-64","January","Outer Regional Australia",9,0,0
+"VIC","40-64","January","Unknown",1,0,0
+"VIC","40-64","July","Inner Regional Australia",51,0,0
+"VIC","40-64","July","Major Cities of Australia",368,0,0
+"VIC","40-64","July","Outer Regional Australia",16,0,0
+"VIC","40-64","July","Unknown",4,0,0
+"VIC","40-64","June","Inner Regional Australia",37,0,0
+"VIC","40-64","June","Major Cities of Australia",381,0,0
+"VIC","40-64","June","Outer Regional Australia",11,0,0
+"VIC","40-64","June","Unknown",6,0,0
+"VIC","40-64","March","Inner Regional Australia",53,0,0
+"VIC","40-64","March","Major Cities of Australia",536,0,0
+"VIC","40-64","March","Outer Regional Australia",15,0,0
+"VIC","40-64","May","Inner Regional Australia",62,0,0
+"VIC","40-64","May","Major Cities of Australia",405,0,0
+"VIC","40-64","May","Outer Regional Australia",10,0,0
+"VIC","40-64","November","Inner Regional Australia",301,0,0
+"VIC","40-64","November","Major Cities of Australia",2177,0,0
+"VIC","40-64","November","Outer Regional Australia",21,0,0
+"VIC","40-64","November","Unknown",79,0,0
+"VIC","40-64","October","Inner Regional Australia",239,0,0
+"VIC","40-64","October","Major Cities of Australia",2178,0,0
+"VIC","40-64","October","Outer Regional Australia",18,0,0
+"VIC","40-64","October","Unknown",22,0,0
+"VIC","40-64","September","Inner Regional Australia",36,0,0
+"VIC","40-64","September","Major Cities of Australia",412,0,0
+"VIC","40-64","September","Outer Regional Australia",11,0,0
+"VIC","40-64","September","Unknown",2,0,0
+"VIC","65 and over","April","Inner Regional Australia",7,0,0
+"VIC","65 and over","April","Major Cities of Australia",60,0,0
+"VIC","65 and over","April","Outer Regional Australia",1,0,0
+"VIC","65 and over","August","Inner Regional Australia",5,0,0
+"VIC","65 and over","August","Major Cities of Australia",51,0,0
+"VIC","65 and over","August","Outer Regional Australia",1,0,0
+"VIC","65 and over","December","Inner Regional Australia",101,0,0
+"VIC","65 and over","December","Major Cities of Australia",244,0,0
+"VIC","65 and over","December","Outer Regional Australia",3,0,0
+"VIC","65 and over","February","Inner Regional Australia",7,0,0
+"VIC","65 and over","February","Major Cities of Australia",59,0,0
+"VIC","65 and over","February","Outer Regional Australia",2,0,0
+"VIC","65 and over","January","Inner Regional Australia",7,0,0
+"VIC","65 and over","January","Major Cities of Australia",38,0,0
+"VIC","65 and over","January","Outer Regional Australia",3,0,0
+"VIC","65 and over","July","Inner Regional Australia",11,0,0
+"VIC","65 and over","July","Major Cities of Australia",55,0,0
+"VIC","65 and over","June","Inner Regional Australia",4,0,0
+"VIC","65 and over","June","Major Cities of Australia",37,0,0
+"VIC","65 and over","June","Outer Regional Australia",2,0,0
+"VIC","65 and over","March","Inner Regional Australia",9,0,0
+"VIC","65 and over","March","Major Cities of Australia",59,0,0
+"VIC","65 and over","March","Outer Regional Australia",3,0,0
+"VIC","65 and over","May","Inner Regional Australia",12,0,0
+"VIC","65 and over","May","Major Cities of Australia",42,0,0
+"VIC","65 and over","May","Outer Regional Australia",1,0,0
+"VIC","65 and over","November","Inner Regional Australia",49,0,0
+"VIC","65 and over","November","Major Cities of Australia",297,0,0
+"VIC","65 and over","November","Outer Regional Australia",5,0,0
+"VIC","65 and over","November","Unknown",6,0,0
+"VIC","65 and over","October","Inner Regional Australia",33,0,0
+"VIC","65 and over","October","Major Cities of Australia",294,0,0
+"VIC","65 and over","October","Outer Regional Australia",5,0,0
+"VIC","65 and over","October","Unknown",3,0,0
+"VIC","65 and over","September","Inner Regional Australia",4,0,0
+"VIC","65 and over","September","Major Cities of Australia",47,0,0
+"VIC","65 and over","September","Outer Regional Australia",5,0,0
+"VIC","Unknown","April","Major Cities of Australia",1,0,0
+"VIC","Unknown","August","Inner Regional Australia",296,0,0
+"VIC","Unknown","August","Major Cities of Australia",3883,0,0
+"VIC","Unknown","August","Unknown",560,0,0
+"VIC","Unknown","December","Inner Regional Australia",308,0,0
+"VIC","Unknown","December","Major Cities of Australia",855,0,0
+"VIC","Unknown","July","Inner Regional Australia",150,0,0
+"VIC","Unknown","July","Major Cities of Australia",3157,0,0
+"VIC","Unknown","July","Outer Regional Australia",6,0,0
+"VIC","Unknown","July","Unknown",283,0,0
+"VIC","Unknown","March","Major Cities of Australia",1,0,0
+"VIC","Unknown","May","Major Cities of Australia",3,0,0
+"VIC","Unknown","November","Inner Regional Australia",142,0,0
+"VIC","Unknown","November","Major Cities of Australia",1194,0,0
+"VIC","Unknown","November","Outer Regional Australia",2,0,0
+"VIC","Unknown","November","Unknown",32,0,0
+"VIC","Unknown","October","Inner Regional Australia",329,0,0
+"VIC","Unknown","October","Major Cities of Australia",1786,0,0
+"VIC","Unknown","October","Unknown",8,0,0
+"VIC","Unknown","September","Inner Regional Australia",274,0,0
+"VIC","Unknown","September","Major Cities of Australia",4934,0,0
+"WA","0-16","January","Unknown",0,0,1
+"WA","17-25","April","Unknown",63,0,2
+"WA","17-25","August","Unknown",48,1,2
+"WA","17-25","December","Unknown",35,0,3
+"WA","17-25","February","Unknown",69,0,4
+"WA","17-25","January","Unknown",72,0,5
+"WA","17-25","July","Unknown",60,0,5
+"WA","17-25","June","Unknown",63,0,5
+"WA","17-25","March","Unknown",76,0,3
+"WA","17-25","May","Unknown",69,0,1
+"WA","17-25","November","Unknown",57,0,2
+"WA","17-25","October","Unknown",52,0,0
+"WA","17-25","September","Unknown",42,0,2
+"WA","26-39","April","Unknown",136,0,2
+"WA","26-39","August","Unknown",107,2,8
+"WA","26-39","December","Unknown",78,0,2
+"WA","26-39","February","Unknown",155,1,12
+"WA","26-39","January","Unknown",178,0,5
+"WA","26-39","July","Unknown",115,0,4
+"WA","26-39","June","Unknown",124,0,1
+"WA","26-39","March","Unknown",184,0,12
+"WA","26-39","May","Unknown",171,0,6
+"WA","26-39","November","Unknown",108,0,1
+"WA","26-39","October","Unknown",92,0,2
+"WA","26-39","September","Unknown",64,0,11
+"WA","40-64","April","Unknown",90,0,3
+"WA","40-64","August","Unknown",96,0,5
+"WA","40-64","December","Unknown",55,0,5
+"WA","40-64","February","Unknown",125,1,4
+"WA","40-64","January","Unknown",123,1,10
+"WA","40-64","July","Unknown",92,0,4
+"WA","40-64","June","Unknown",103,0,4
+"WA","40-64","March","Unknown",166,0,4
+"WA","40-64","May","Unknown",121,0,3
+"WA","40-64","November","Unknown",90,1,3
+"WA","40-64","October","Unknown",101,0,3
+"WA","40-64","September","Unknown",65,0,2
+"WA","65 and over","April","Unknown",12,0,1
+"WA","65 and over","August","Unknown",3,0,0
+"WA","65 and over","December","Unknown",5,0,0
+"WA","65 and over","February","Unknown",19,0,1
+"WA","65 and over","January","Unknown",19,0,1
+"WA","65 and over","July","Unknown",10,0,1
+"WA","65 and over","June","Unknown",13,0,0
+"WA","65 and over","March","Unknown",21,0,0
+"WA","65 and over","May","Unknown",17,0,1
+"WA","65 and over","November","Unknown",6,0,0
+"WA","65 and over","October","Unknown",10,0,0
+"WA","65 and over","September","Unknown",12,0,1

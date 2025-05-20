@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/visualisations.css">
     <title>Mobile Phone Use</title>
 </head>
 <body>
@@ -49,9 +50,22 @@
         <h2>Fines Over Time</h2>
         <h3>The Rising Tide of Mobile Fines</h3>
         <p>In just 15 years, mobile phone fines in Australia exploded by 1,700% - from 156,000 (2008) to 2.8 million (2023). What caused this seismic shift? Australia's mobile phone fines evolved through three phases: Stable enforcement (2008-2015, ~150K fines/year) declined slightly (2016-2019) before high-tech detection systems triggered unprecedented growth. Annual fines tripled to 360K+ by 2022, with NSW/QLD now accounting for 80% of all fines. This 1,700% national increase since 2008 demonstrates the effectiveness of modern enforcement - no driver is immune from today's strict detection systems.</p>
+        <!--
         <div class="visualisation-placeholder">
             <img src="assets/chart1.png" alt="Visualisation Placeholder" style="width: 100%; height: auto;">
         </div>
+        -->
+        <div class="interactions-holder">
+            <div class="dropdown">
+                <label for="detection-method">Select Detection Method:</label>
+                <select id="detection-method">
+                    <option value="all" selected>All</option>
+                    <option value="Camera issued">Camera</option>
+                    <option value="Police issued">Police</option>
+                </select>
+            </div>
+        </div>
+        <div id="linechart" class="visualisation-placeholder"></div>
         <div class="chart-tools">
             <h3>How to Use This Chart</h3>
             <p>Hover over the chart to see detailed data points for each year. Use the dropdown menu to filter by jurisdiction or detection method. Zoom in on specific time periods by clicking and dragging over the chart area.</p>
@@ -89,5 +103,11 @@
             Designed by Team DV12_T08: Thu Truong | Thanh Tai Tran
         </p>
     </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/load-data.js"></script>
+    <script src="js/shared-constants.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/linechart.js"></script>
 </body>
 </html>
