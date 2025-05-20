@@ -1,6 +1,6 @@
-const margin = {top: 40, right: 30, bottom: 50, left: 50};
+const margin = {top: 60, right: 30, bottom: 30, left: 50};
 const width = 800;
-const height = 500;
+const height = 600;
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
 

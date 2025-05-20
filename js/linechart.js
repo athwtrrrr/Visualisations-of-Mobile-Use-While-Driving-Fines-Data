@@ -1,11 +1,14 @@
-const svg = d3.select("#linechart")
+const drawLineChart = (data) => {
+    //reset the chart
+    d3.select("#linechart").select("svg").remove();
+
+    const svg = d3.select("#linechart")
     .append("svg")
     .attr("viewBox", `0 0 ${width} ${height}`)
 
-const innerChartL = svg.append("g")
+    const innerChartL = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
-const drawLineChart = (data) => {
     xScaleL
     .domain(d3.extent(data, d => d.year))
     .range([0, innerWidth]);
@@ -64,6 +67,17 @@ const drawLineChart = (data) => {
         .append("text")
         .text("Total Number of Fines")
             .attr("x", 0)
-            .attr("y", 20)
+            .attr("y", 40)
             .attr("class", "axis-label");
+
+    const selectOption = document.getElementById("detection-method").value;
+
+    //add title
+    svg
+        .append("text")
+        .text(`Annual Fines trend by Jurisdictions using ${selectOption} Detection Method`)
+            .attr("x", width/2)
+            .attr("y", 15)
+            .attr("class", "title")
+            .attr("text-anchor", "middle");
 } 
