@@ -237,3 +237,8 @@ footer p {
         font-size: 1rem;
     }
 }
+
+.interactions-holder{
+    display: flex;
+    justify-content: space-evenly;
+}
