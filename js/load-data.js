@@ -21,6 +21,7 @@ d3.csv("../data/line_chart.csv", d => {
     console.log("Error loading linechart csv file: ", error);
 });
 
+//load heatmap
 d3.csv("../data/heatmap.csv", d => {
     return{
         jurisdiction: d["JURISDICTION"],
