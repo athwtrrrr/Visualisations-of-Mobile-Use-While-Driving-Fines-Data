@@ -11,9 +11,6 @@ const updateData = (data, chart) => {
 
         return aggregatedByLocationAndAgeGroup;
     }
-    else if (chart === "bar"){
-        //bar goes her
-    }
     else if (chart === "grouped_bar"){
         //bar chart goes her
     }
