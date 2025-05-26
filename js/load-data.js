@@ -13,7 +13,7 @@ d3.csv("../data/line_chart.csv", d => {
     updated_data = updateData(data, "line");
     drawLineChart(updated_data);
 
-    d3.selectAll("#from-lines, #end-lines").on("change", function() {
+    d3.selectAll("#from-lines, #end-lines, .form-check-input-2-lines").on("change", function() {
         const updated_data = updateData(data, "line");
         drawLineChart(updated_data);
     });
@@ -44,7 +44,7 @@ d3.csv("../data/heatmap.csv", d => {
     updated_data = updateData(data, "heatmap");
     drawHeatmap(updated_data);
 
-    d3.selectAll(".form-check-input").on("change", function() {
+    d3.selectAll(".form-check-input-2-heatmap").on("change", function() {
         const updated_data = updateData(data, "heatmap");
         drawHeatmap(updated_data);
     });
