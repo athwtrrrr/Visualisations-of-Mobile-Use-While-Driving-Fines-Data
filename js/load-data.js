@@ -8,9 +8,15 @@ d3.csv("../data/line_chart.csv", d => {
     }
 }).then(data=>{
     console.log(data);
+    populateLineChartFilters(data);
     //draw when first load
     updated_data = updateData(data, "line");
     drawLineChart(updated_data);
+
+    d3.selectAll("#from-lines, #end-lines").on("change", function() {
+        const updated_data = updateData(data, "line");
+        drawLineChart(updated_data);
+    });
 
     document.getElementById("detection-method").addEventListener("change", function() {
         const updated_data = updateData(data, "line");
