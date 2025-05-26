@@ -1,7 +1,8 @@
 const updateData = (data, chart) => {
     if (chart === "line") {
         const filteredYearData = filterDataByYears(data);
-        const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredYearData);
+        const filteredJurisdictionData = filterDataByJurisdiction(filteredYearData);
+        const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredJurisdictionData);
         console.log("Aggregated data for line: ", aggregatedByDetectionMethod);
 
         return aggregatedByDetectionMethod;
@@ -63,13 +64,21 @@ const filterDataByYears = (data) => {
     return data.filter(d => d.year >= startYear && d.year <= endYear);
 }
 
+const filterDataByJurisdiction = (data) => {
+    selectedJurisdictions = getCheckedValues("#jurisdictions-lines input");
+    console.log("Selected jurisdictions for Lines: ", selectedJurisdictions);
+
+    //filter data based on the selected jurisdictions
+    return data.filter(d => selectedJurisdictions.includes(d.jurisdiction));
+}
+
 const aggregateByLocationAndAgeGroup = (data) => {
     let filteredData;
 
     selectedMonths = getCheckedValues("#months input");
     selectedJurisdictions = getCheckedValues("#jurisdictions input");
     console.log("Selected months: ", selectedMonths);
-    console.log("Selected jurisdictions: ", selectedJurisdictions);
+    console.log("Selected jurisdictions for Heatmap: ", selectedJurisdictions);
 
     //first, filter data based on months and jurisdictions
     filteredData = data.filter(d => selectedMonths.includes(d.month) && selectedJurisdictions.includes(d.jurisdiction));
@@ -105,7 +114,7 @@ const populateHeatmapFilters = (data) => {
     months.forEach(m => {
         d3.select("#months").append("li").html(`
                 <div class="form-check dropdown-item">
-                    <input class="form-check-input" type="checkbox" value="${m}" id="${m}" checked>
+                    <input class="form-check-input-2-heatmap" type="checkbox" value="${m}" id="${m}" checked>
                     <label class="form-check-label" for="${m}">${m}</label>
                 </div>
             `
@@ -115,7 +124,7 @@ const populateHeatmapFilters = (data) => {
     jurisdictions.forEach(j => {
         d3.select("#jurisdictions").append("li").html(`
                 <div class="form-check dropdown-item">
-                    <input class="form-check-input" type="checkbox" value="${j}" id="${j}" checked>
+                    <input class="form-check-input-2-heatmap" type="checkbox" value="${j}" id="${j}" checked>
                     <label class="form-check-label" for="${j}">${j}</label>
                 </div>
             `
@@ -125,8 +134,19 @@ const populateHeatmapFilters = (data) => {
 
 const populateLineChartFilters = (data) => {
     const years = Array.from(new Set(data.map(d => d.year)));
+    const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction)));
     const maxYear = d3.max(years);
     const minYear = d3.min(years);
+    
+    jurisdictions.forEach(j => {
+        d3.select("#jurisdictions-lines").append("li").html(`
+                <div class="form-check dropdown-item">
+                    <input class="form-check-input-2-lines" type="checkbox" value="${j}" id="${j}" checked>
+                    <label class="form-check-label" for="${j}">${j}</label>
+                </div>
+            `
+        )
+    });
 
     years.forEach(y =>{
         d3.select('#from-lines').append("option")
