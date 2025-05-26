@@ -1,6 +1,7 @@
 const updateData = (data, chart) => {
     if (chart === "line") {
-        const aggregatedByDetectionMethod = aggregateByDetectionMethod(data);
+        const filteredYearData = filterDataByYears(data);
+        const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredYearData);
         console.log("Aggregated data for line: ", aggregatedByDetectionMethod);
 
         return aggregatedByDetectionMethod;
@@ -49,6 +50,17 @@ const aggregateByDetectionMethod = (data) => {
     aggregatedData.sort((a, b) => d3.ascending(a.year, b.year));
 
     return aggregatedData;
+}
+
+const filterDataByYears = (data) => {
+    const startYear = parseInt(document.getElementById("from-lines").value);
+    const endYear = parseInt(document.getElementById("end-lines").value);
+
+    console.log("start year: ", startYear);
+    console.log("end year: ", endYear);
+
+    //filter data based on the selected years
+    return data.filter(d => d.year >= startYear && d.year <= endYear);
 }
 
 const aggregateByLocationAndAgeGroup = (data) => {
@@ -109,6 +121,28 @@ const populateHeatmapFilters = (data) => {
             `
         )
     });
+}
+
+const populateLineChartFilters = (data) => {
+    const years = Array.from(new Set(data.map(d => d.year)));
+    const maxYear = d3.max(years);
+    const minYear = d3.min(years);
+
+    years.forEach(y =>{
+        d3.select('#from-lines').append("option")
+            .attr("class", "dropdown-year")
+            .attr("value", y)
+            .property("selected", y === minYear)
+            .text(y);
+    })
+    years.forEach(y =>{
+        d3.select('#end-lines').append("option")
+            .attr("class", "dropdown-year")
+            .attr("value", y)
+            .property("selected", y === maxYear)
+            .text(y);
+    })
+    
 }
 
 function getCheckedValues(selector){
