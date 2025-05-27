@@ -43,7 +43,7 @@ d3.csv("../data/heatmap.csv", d => {
     updated_data = updateData(data, "heatmap");
     drawHeatmap(updated_data);
 
-    d3.selectAll(".form-check-input-2-heatmap").on("change", function() {
+    d3.selectAll(".form-check-input-2-heatmap, #enforcement-type-heatmap").on("change", function() {
         const updated_data = updateData(data, "heatmap");
         drawHeatmap(updated_data);
     });

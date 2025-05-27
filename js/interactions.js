@@ -72,6 +72,7 @@ const aggregateByDetectionMethod = (data) => {
 }
 
 const aggregatedSumByYears = (data) => {
+    //aggregate sum of data by year
     const aggregatedData = Array.from(
         d3.rollup(
             data,
@@ -112,19 +113,43 @@ const aggregateByLocationAndAgeGroup = (data) => {
 
     selectedMonths = getCheckedValues("#months input");
     selectedJurisdictions = getCheckedValues("#jurisdictions input");
+    
+
     console.log("Selected months: ", selectedMonths);
     console.log("Selected jurisdictions for Heatmap: ", selectedJurisdictions);
+
+    const enforcementType = document.getElementById("enforcement-type-heatmap").value;
 
     //first, filter data based on months and jurisdictions
     filteredData = data.filter(d => selectedMonths.includes(d.month) && selectedJurisdictions.includes(d.jurisdiction));
 
+    let aggregatedData = null;
+
     //then aggregate selected enforcement method
-    const aggregatedData = d3.rollups(
+    if (enforcementType === "fines"){
+        aggregatedData = d3.rollups(
         filteredData,
-        v => d3.sum(v, d => d.fines),
-        d => d.location,
-        d => d.age_group,
-    );
+            v => d3.sum(v, d => d.fines),
+            d => d.location,
+            d => d.age_group,
+        );
+    }
+    else if (enforcementType === "arrests") {
+        aggregatedData = d3.rollups(
+        filteredData,
+            v => d3.sum(v, d => d.arrests),
+            d => d.location,
+            d => d.age_group,
+        );
+    }
+    else if (enforcementType === "charges") {
+        aggregatedData = d3.rollups(
+        filteredData,
+            v => d3.sum(v, d => d.charges),
+            d => d.location,
+            d => d.age_group,
+        );
+    }
 
     //convert to array of row-based objects
     const aggregatedDataArray = aggregatedData.map(([location, group]) => {
@@ -144,6 +169,8 @@ const aggregateByLocationAndAgeGroup = (data) => {
 const populateHeatmapFilters = (data) => {
     const months = Array.from(new Set(data.map(d => d.month)));
     const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction)));
+    const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
+    const locations = Array.from(new Set(data.map(d => d.location)));
 
     //populate with checkboxes
     months.forEach(m => {
@@ -165,6 +192,26 @@ const populateHeatmapFilters = (data) => {
             `
         )
     });
+
+    ageGroups.forEach(a => {
+        d3.select("#agegroups").append("li").html(`
+                <div class="form-check dropdown-item">
+                    <input class="form-check-input-2-heatmap" type="checkbox" value="${a}" id="${a}" checked>
+                    <label class="form-check-label" for="${a}">${a}</label>
+                </div>
+            `
+        )
+    })
+
+    locations.forEach(l => {
+        d3.select("#locations").append("li").html(`
+                <div class="form-check dropdown-item">
+                    <input class="form-check-input-2-heatmap" type="checkbox" value="${l}" id="${l}" checked>
+                    <label class="form-check-label" for="${l}">${l}</label>
+                </div>
+            `
+        )
+    })
 }
 
 const populateLineChartFilters = (data) => {

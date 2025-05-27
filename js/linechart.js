@@ -216,7 +216,7 @@ const drawLineChart = (data) => {
     //add title
     svg
         .append("text")
-        .text(`Annual Fines trend by Jurisdictions using ${selectOption} Detection Method from ${selectedStartYear} to ${selectedEndYear}`)
+        .text(`Annual Fines trend by ${viewby} using ${selectOption} Detection Method from ${selectedStartYear} to ${selectedEndYear}`)
             .attr("x", width/2)
             .attr("y", 15)
             .attr("class", "title")

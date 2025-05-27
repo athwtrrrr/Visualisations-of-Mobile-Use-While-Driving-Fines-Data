@@ -121,6 +121,14 @@
         </div>
         -->
         <div class="interactions-holder">
+            <div id ="enforcement-type" class="dropdown">
+                <label for="enforcement-type-heatmap">Select Enforcement Type:</label>
+                <select id="enforcement-type-heatmap">
+                    <option value="fines" selected>Fines</option>
+                    <option value="arrests">Arrests</option>
+                    <option value="charges">Charges</option>
+                </select>
+            </div>
             <div class="dropdown-checkbox">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuCheckbox" data-bs-toggle="dropdown" aria-expanded="false">
                     Select Jurisdictions
@@ -132,6 +140,18 @@
                     Select Months
                 </button>
                 <ul class="dropdown-menu" id="months" aria-labelledby="dropdownMenuCheckbox"></ul>
+            </div>
+            <div class="dropdown-checkbox">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuCheckbox" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Age Groups
+                </button>
+                <ul class="dropdown-menu" id="agegroups" aria-labelledby="dropdownMenuCheckbox"></ul>
+            </div>
+            <div class="dropdown-checkbox">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuCheckbox" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Locations
+                </button>
+                <ul class="dropdown-menu" id="locations" aria-labelledby="dropdownMenuCheckbox"></ul>
             </div>
                 
         </div>
