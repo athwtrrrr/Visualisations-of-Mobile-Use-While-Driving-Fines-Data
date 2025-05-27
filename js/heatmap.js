@@ -89,4 +89,5 @@ const drawHeatmap = (data) => {
         .attr("x", width/2 + marginLeftBuffer)
         .attr("y", 20)
         .attr("class", "chart-title");
+
 }

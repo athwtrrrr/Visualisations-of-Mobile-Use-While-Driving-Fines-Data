@@ -57,6 +57,83 @@ const drawLineChart = (data) => {
             .attr("stroke-dashoffset", 0);
     });
 
+
+    // Tooltip setup
+    const tooltip = d3.select("#linechart")
+        .append("div")
+        .attr("class", "tooltip")
+
+    const dashedLine = innerChartL.append("line")
+        .attr("stroke", "black")
+        .attr("stroke-width", 1)
+        .attr("stroke-dasharray", "4")
+        .style("opacity", 0);
+
+    const circle = innerChartL.selectAll(".circle-hover")
+        .data(jurisdictions)
+        .enter()
+        .append("circle")
+        .attr("class", "circle-hover")
+        .attr("r", 4)
+        .attr("fill", "transparent")
+        .attr("stroke", d => colorScaleL(d))
+        .attr("stroke-width", 1)
+        .style("opacity", 0);
+
+    
+    innerChartL
+        //listerning rectangles
+        .append("rect")
+        .attr("width", innerWidth)
+        .attr("height", innerHeight)
+        .attr("fill", "none")
+        .attr("pointer-events", "all")
+        .on("mousemove", function(event) {
+            const [mx] = d3.pointer(event, this);
+            // Find closest year
+            const x0 = xScaleL.invert(mx);
+            const year = Math.round(x0);
+            
+            // Get all data points for that year
+            const yearData = data.filter(d => d.year === year);
+            if (yearData.length === 0) {
+                tooltip.style("opacity", 0);
+                dashedLine.style("opacity", 0);
+                circle.style("opacity", 0);
+                return;
+            }
+
+            tooltip.html(
+                `<strong>Year: ${year}</strong><br>` +
+                yearData.map(d =>
+                    `<span style="color:${colorScaleL(d.jurisdiction)}">\u25CF</span> ${d.jurisdiction}: ${d.fines_total}`
+                ).join("<br>")
+            )
+            .style("left", (event.pageX + 15) + "px")
+            .style("top", (event.pageY - 28) + "px")
+            .style("opacity", 1);
+
+            //get the x position of the year nearst to the mouse pointer
+            const xYear = xScaleL(Math.round(xScaleL.invert(d3.pointer(event, this)[0])));
+
+            dashedLine
+                .attr("x1", xYear)
+                .attr("y1", 0)
+                .attr("x2", xYear)
+                .attr("y2", innerHeight)
+                .style("opacity", 1);
+
+            circle
+                .attr("cx", xYear)
+                .attr("cy", d => yScaleL(yearData.find(item => item.jurisdiction === d).fines_total))
+                .style("opacity", 1);
+        })
+        .on("mouseleave", function() {
+            tooltip.style("opacity", 0);
+            dashedLine.style("opacity", 0);
+            circle.style("opacity", 0);
+        });
+
     //add axes
     const bottomAxisL = d3.axisBottom(xScaleL)
         .tickFormat(d3.format("d"));
@@ -70,6 +147,8 @@ const drawLineChart = (data) => {
     innerChartL
         .append("g")
         .call(leftAxisL);
+
+    
 
     //add the labels to axes
     svg
