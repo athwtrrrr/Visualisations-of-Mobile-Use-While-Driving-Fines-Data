@@ -57,6 +57,8 @@ const drawLineChart = (data) => {
             .attr("stroke-dashoffset", 0);
     });
 
+    //view by
+     const viewby = document.getElementById("view-by").value;
 
     // Tooltip setup
     const tooltip = d3.select("#linechart")
@@ -102,16 +104,31 @@ const drawLineChart = (data) => {
                 circle.style("opacity", 0);
                 return;
             }
-
-            tooltip.html(
-                `<strong>Year: ${year}</strong><br>` +
-                yearData.map(d =>
-                    `<span style="color:${colorScaleL(d.jurisdiction)}">\u25CF</span> ${d.jurisdiction}: ${d.fines_total}`
-                ).join("<br>")
-            )
-            .style("left", (event.pageX + 15) + "px")
-            .style("top", (event.pageY - 28) + "px")
-            .style("opacity", 1);
+            
+            //display tooltip accordingly
+            if (viewby === "All Australia") {
+                tooltip.html(
+                    `<strong>Year: ${year}</strong><br>` +
+                    yearData.map(d =>
+                        `<span style="color:${colorScaleL(d.jurisdiction)}">\u25CF</span> Australia: ${d.fines_total}`
+                    ).join("<br>")
+                )
+                .style("left", (event.pageX + 15) + "px")
+                .style("top", (event.pageY - 28) + "px")
+                .style("opacity", 1);
+            }
+            else{
+                tooltip.html(
+                    `<strong>Year: ${year}</strong><br>` +
+                    yearData.map(d =>
+                        `<span style="color:${colorScaleL(d.jurisdiction)}">\u25CF</span> ${d.jurisdiction}: ${d.fines_total}`
+                    ).join("<br>")
+                )
+                .style("left", (event.pageX + 15) + "px")
+                .style("top", (event.pageY - 28) + "px")
+                .style("opacity", 1);
+            }
+            
 
             //get the x position of the year nearst to the mouse pointer
             const xYear = xScaleL(Math.round(xScaleL.invert(d3.pointer(event, this)[0])));
@@ -182,6 +199,13 @@ const drawLineChart = (data) => {
                 .attr("height", 18)
                 .attr("fill", colorScaleL);
 
+            if (viewby === "All Australia") {
+                g.append("text")
+                    .attr("x", 22)
+                    .attr("y", 15)
+                    .attr("font-size", "12px")
+                    .text("Australia");
+            }
             g.append("text")
                 .attr("x", 22)
                 .attr("y", 15)

@@ -1,11 +1,29 @@
 const updateData = (data, chart) => {
     if (chart === "line") {
-        const filteredYearData = filterDataByYears(data);
-        const filteredJurisdictionData = filterDataByJurisdiction(filteredYearData);
-        const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredJurisdictionData);
-        console.log("Aggregated data for line: ", aggregatedByDetectionMethod);
+        const viewby = document.getElementById("view-by").value;
 
-        return aggregatedByDetectionMethod;
+        if (viewby === "By Jurisdictions") {
+            d3.selectAll(".dropdown-checkbox").style("display", "block");
+            const filteredYearData = filterDataByYears(data);
+            const filteredJurisdictionData = filterDataByJurisdiction(filteredYearData);
+            const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredJurisdictionData);
+            //console.log("Aggregated data for line: ", aggregatedByDetectionMethod);
+
+            return aggregatedByDetectionMethod;
+        }
+        else if (viewby === "All Australia") {
+            d3.selectAll(".dropdown-checkbox").style("display", "none");    //hide the jurisdiction filters
+            const filteredYearData = filterDataByYears(data);
+            const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredYearData);
+            const aggregatedSumYearsData= aggregatedSumByYears(aggregatedByDetectionMethod);
+            
+            return aggregatedSumYearsData;
+        }
+        else {
+            console.log("Invalid view by option");
+            return;
+        }
+        
     }
     else if(chart === "heatmap") {
         const aggregatedByLocationAndAgeGroup = aggregateByLocationAndAgeGroup(data);
@@ -50,6 +68,23 @@ const aggregateByDetectionMethod = (data) => {
     //sort by year
     aggregatedData.sort((a, b) => d3.ascending(a.year, b.year));
 
+    return aggregatedData;
+}
+
+const aggregatedSumByYears = (data) => {
+    const aggregatedData = Array.from(
+        d3.rollup(
+            data,
+            v => d3.sum(v, d => d.fines_total),
+            d => d.year
+        ),
+        ([year, fines_total]) => ({
+            year,
+            fines_total
+        })
+    );
+
+    aggregatedData.sort((a, b) => d3.ascending(a.year, b.year));
     return aggregatedData;
 }
 

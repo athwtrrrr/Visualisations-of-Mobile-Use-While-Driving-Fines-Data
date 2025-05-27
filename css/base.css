@@ -195,10 +195,17 @@ body {
 .visualisation-placeholder {
     margin: 50px 0;
     padding: 20px;
-    background-color: #f8faff;
-    border-radius: 8px;
-    border: 1px solid #e0e9ff;
+    border-radius: 5px;
 }
+
+select{
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+
 
 /* Footer */
 footer {
