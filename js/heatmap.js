@@ -13,8 +13,13 @@ const drawHeatmap = (data) => {
         .attr("transform", `translate(${margin.left+marginLeftBuffer}, ${margin.top})`);
 
     //extract age groups and locations
-    const ageGroupsChart = Object.keys(data[0]).filter(k => k !== "location");
-    const locations = Array.from(new Set(data.map(d => d.location)));
+    const selectedAgeGroups = getCheckedValues("#agegroups input");
+    const selectedLocations = getCheckedValues("#locations input");
+
+    const ageGroupsChart = Object.keys(data[0])
+        .filter(k => k !== "location" && selectedAgeGroups.includes(k));
+    const locations = Array.from(new Set(data.map(d => d.location)))
+        .filter(l => selectedLocations.includes(l));
 
     console.log("Age groups: ", ageGroupsChart);
     console.log("Locations: ", locations);
@@ -73,6 +78,8 @@ const drawHeatmap = (data) => {
         .attr("fill", "black")
         .text(d => d.value);
 
+    const enforcementType = document.getElementById("enforcement-type-heatmap").value;
+
     // Add axes
     innerChart.append("g")
         .attr("transform", `translate(0,0)`)
@@ -84,7 +91,7 @@ const drawHeatmap = (data) => {
     //add title
     svg
         .append("text")
-        .text("Heatmap of Fines by Age Group and Location")
+        .text(`Heatmap of ${enforcementType} enforced by Age Group and Location in 2023`)
         .attr("text-anchor", "middle")
         .attr("x", width/2 + marginLeftBuffer)
         .attr("y", 20)
