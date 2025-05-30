@@ -52,3 +52,20 @@ d3.csv("../data/heatmap.csv", d => {
 }).catch(error=> {
     console.log("Error loading heatmap csv file: ", error);
 });
+
+d3.csv("../data/grouped_bar_chart.csv", d => ({
+    jurisdiction: d["JURISDICTION"],
+    age_group: d["AGE_GROUP"],
+    Total_FINES: +d["Total_FINES"],
+    Total_ARRESTS: +d["Total_ARRESTS"],
+    Total_CHARGES: +d["Total_CHARGES"]
+})).then(data => {
+    console.log(data);
+    const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction)));
+    const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
+
+
+    drawBarChart(data);
+}).catch(error => {
+    console.error("Error loading barchart csv file:", error);
+});
