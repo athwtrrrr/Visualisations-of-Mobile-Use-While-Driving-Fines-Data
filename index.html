@@ -87,6 +87,7 @@
                     <option value="all" selected>All</option>
                     <option value="Camera issued">Camera</option>
                     <option value="Police issued">Police</option>
+                    <option value="Unknown">Unknown</option>
                 </select>
             </div>
         </div>
@@ -106,6 +107,26 @@
             <img src="assets/chart2.png" alt="Visualisation Placeholder" style="width: 100%; height: auto;">
         </div>
         -->
+        <div class="interactions-holder">
+            <div id ="detection-bars" class="dropdown">
+                <label for="detection-method-bars">Select Detection Method:</label>
+                <select id="detection-method-bars">
+                    <option value="all" selected>All</option>
+                    <option value="Camera issued">Camera</option>
+                    <option value="Police issued">Police</option>
+                    <option value="Unknown">Unknown</option>
+                </select>
+            </div>
+            <div class="dropdown-checkbox">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuCheckbox" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Age Groups
+                </button>
+                <ul class="dropdown-menu" id="agegroups-bars" aria-labelledby="dropdownMenuCheckbox"></ul>
+            </div>
+            <!--TODO: ADD JURISDICTION CHECKBOX DROPDOWN MENU-->
+            <!--TODO: ADD ENFORCEMENT TYPE DROPDOWN MENU-->
+        </div>
+        
         <div id="barchart" class="visualisation-placeholder"></div>
         <div class="chart-tools">
             <h3>How to Use This Chart</h3>

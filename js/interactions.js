@@ -32,7 +32,10 @@ const updateData = (data, chart) => {
         return aggregatedByLocationAndAgeGroup;
     }
     else if (chart === "grouped_bar"){
-        //bar chart goes her
+        //TODO: FILTER FIRST, AGGREGATE LATER
+        const aggregatedByDetectionMethod = aggregateByDetectionMethodBar(data);
+
+        return aggregatedByDetectionMethod;
     }
     else {
         console.log("Invalid chart type");
@@ -72,6 +75,42 @@ const aggregateByDetectionMethod = (data) => {
     aggregatedData.sort((a, b) => d3.ascending(a.year, b.year));
 
     return aggregatedData;
+}
+
+const aggregateByDetectionMethodBar = (data) => {
+    let filteredData;
+
+    
+    //filter data based on the selected option
+    let selectOption = document.getElementById("detection-method-bars").value;
+    console.log("Selected option bar: ", selectOption);
+    if (selectOption === "all") {
+        filteredData = data;
+    } else {
+        filteredData = data.filter(d => d.detection === selectOption);
+    }
+
+    //TODO: AGGREGATE DATA BY THE SELECTED ENFORCEMENT TYPE
+
+    const aggregatedData = Array.from(
+        d3.rollup(
+            filteredData,
+            v => d3.sum(v, d => d.Total_FINES),
+            d => d.age_group,
+            d => d.jurisdiction
+        ),
+        ([age_group, group]) =>
+            Array.from(group, ([jurisdiction, Total_FINES]) => ({
+                age_group,
+                jurisdiction,
+                Total_FINES
+            }))
+    ).flat();
+
+    
+
+    return aggregatedData;
+
 }
 
 const aggregatedSumByYears = (data) => {
@@ -167,6 +206,23 @@ const aggregateByLocationAndAgeGroup = (data) => {
     });
     
     return aggregatedDataArray;
+}
+
+const populateBarChartFilters = (data) => {
+    const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
+
+    //TODO: add detection method filter
+    //TODO: add jurisdiction filter
+
+    ageGroups.forEach(a => {
+        d3.select("#agegroups-bars").append("li").html(`
+                <div class="form-check dropdown-item">
+                    <input class="form-check-input-2-heatmap" type="checkbox" value="${a}" id="${a}" checked>
+                    <label class="form-check-label" for="${a}">${a}</label>
+                </div>
+            `
+        )
+    })
 }
 
 const populateHeatmapFilters = (data) => {

@@ -56,16 +56,22 @@ d3.csv("../data/heatmap.csv", d => {
 d3.csv("../data/grouped_bar_chart.csv", d => ({
     jurisdiction: d["JURISDICTION"],
     age_group: d["AGE_GROUP"],
-    Total_FINES: +d["Total_FINES"],
-    Total_ARRESTS: +d["Total_ARRESTS"],
-    Total_CHARGES: +d["Total_CHARGES"]
+    detection: d["DETECTION_METHOD"],
+    Total_FINES: +d["Sum(FINES)"],
+    Total_ARRESTS: +d["Sum(ARRESTS)"],
+    Total_CHARGES: +d["Sum(CHARGES)"]
 })).then(data => {
-    console.log(data);
-    const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction)));
-    const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
+    console.log("Grouped Bar Chart data",data);
+    populateBarChartFilters(data);
 
-
+    updated_data = updateData(data, "grouped_bar");
     drawBarChart(data);
+
+    //listen for changes in selections
+    d3.selectAll("#detection-method-bars").on("change", function() {
+        const updated_data = updateData(data, "grouped_bar");
+        drawBarChart(updated_data);
+    });
 }).catch(error => {
     console.error("Error loading barchart csv file:", error);
 });
