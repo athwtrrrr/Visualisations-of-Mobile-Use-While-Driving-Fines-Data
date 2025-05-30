@@ -1,35 +1,53 @@
-"JURISDICTION","AGE_GROUP","Total_FINES","Total_ARRESTS","Total_CHARGES"
-"ACT","0-16",10,0,0
-"ACT","17-25",82,0,0
-"ACT","26-39",110,0,0
-"ACT","40-64",79,0,0
-"ACT","65 and over",7,0,0
-"NSW","0-16",18,0,2
-"NSW","17-25",4141,0,56
-"NSW","26-39",5055,0,81
-"NSW","40-64",3692,0,47
-"NSW","65 and over",379,0,1
-"NT","17-25",41,2,6
-"NT","26-39",90,1,2
-"NT","40-64",64,0,0
-"NT","65 and over",10,2,6
-"SA","0-16",3,0,0
-"SA","17-25",1387,0,0
-"SA","26-39",2272,0,0
-"SA","40-64",1805,0,0
-"SA","65 and over",302,0,0
-"TAS","0-16",0,0,0
-"TAS","17-25",440,0,13
-"TAS","26-39",1017,0,21
-"TAS","40-64",837,0,3
-"TAS","65 and over",134,0,0
-"VIC","0-16",6,0,0
-"VIC","17-25",4440,0,0
-"VIC","26-39",13162,0,0
-"VIC","40-64",12162,0,0
-"VIC","65 and over",1572,0,0
-"WA","0-16",0,0,1
-"WA","17-25",706,1,34
-"WA","26-39",1512,3,66
-"WA","40-64",1227,3,50
-"WA","65 and over",147,0,6
+"JURISDICTION","AGE_GROUP","DETECTION_METHOD","Sum(FINES)","Sum(ARRESTS)","Sum(CHARGES)"
+"ACT","0-16","Police issued",10,0,0
+"ACT","17-25","Police issued",82,0,0
+"ACT","26-39","Police issued",110,0,0
+"ACT","40-64","Police issued",79,0,0
+"ACT","65 and over","Police issued",7,0,0
+"NSW","0-16","Police issued",18,0,2
+"NSW","17-25","Police issued",4141,0,56
+"NSW","26-39","Police issued",5055,0,81
+"NSW","40-64","Police issued",3692,0,47
+"NSW","65 and over","Police issued",379,0,1
+"NSW","Unknown","Camera issued",202757,0,0
+"NT","17-25","Police issued",41,2,6
+"NT","26-39","Police issued",90,1,2
+"NT","40-64","Police issued",64,0,0
+"NT","65 and over","Police issued",10,2,6
+"QLD","Unknown","Camera issued",77213,0,0
+"QLD","Unknown","Police issued",3079,0,0
+"SA","0-16","Police issued",3,0,0
+"SA","17-25","Police issued",1387,0,0
+"SA","26-39","Police issued",2272,0,0
+"SA","40-64","Police issued",1805,0,0
+"SA","65 and over","Police issued",302,0,0
+"SA","Unknown","Police issued",0,0,0
+"TAS","0-16","Police issued",0,0,0
+"TAS","17-25","Camera issued",80,0,0
+"TAS","17-25","Police issued",360,0,13
+"TAS","26-39","Camera issued",361,0,0
+"TAS","26-39","Police issued",656,0,21
+"TAS","40-64","Camera issued",374,0,0
+"TAS","40-64","Police issued",463,0,3
+"TAS","65 and over","Camera issued",55,0,0
+"TAS","65 and over","Police issued",79,0,0
+"VIC","0-16","Police issued",6,0,0
+"VIC","17-25","Camera issued",893,0,0
+"VIC","17-25","Police issued",3547,0,0
+"VIC","26-39","Camera issued",4843,0,0
+"VIC","26-39","Police issued",8319,0,0
+"VIC","40-64","Camera issued",5914,0,0
+"VIC","40-64","Police issued",6248,0,0
+"VIC","65 and over","Camera issued",877,0,0
+"VIC","65 and over","Police issued",695,0,0
+"VIC","Unknown","Camera issued",18196,0,0
+"VIC","Unknown","Police issued",8,0,0
+"WA","0-16","Unknown",0,0,1
+"WA","17-25","Police issued",706,0,0
+"WA","17-25","Unknown",0,1,34
+"WA","26-39","Police issued",1512,0,0
+"WA","26-39","Unknown",0,3,66
+"WA","40-64","Police issued",1227,0,0
+"WA","40-64","Unknown",0,3,50
+"WA","65 and over","Police issued",147,0,0
+"WA","65 and over","Unknown",0,0,6
