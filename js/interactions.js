@@ -32,15 +32,20 @@ const updateData = (data, chart) => {
         return aggregatedByLocationAndAgeGroup;
     }
     else if (chart === "grouped_bar"){
-        //TODO: FILTER FIRST, AGGREGATE LATER
         d3.selectAll(".dropdown-checkbox").style("display", "block");
-    
+        
         // Filter first, then aggregate
         const filteredData = filterDataByJurisdictionBar(data);
         const filteredByAge = filterDataByAgeGroupBar(filteredData);
-        const aggregatedData = aggregateByDetectionMethodBar(filteredByAge);
-    
+        
+        // Get the selected enforcement type
+        const enforcementType = document.getElementById("enforcement-type-bars").value;
+        
+        // Aggregate based on detection method AND enforcement type
+        const aggregatedData = aggregateByDetectionMethodBar(filteredByAge, enforcementType);
+        
         return aggregatedData;
+
     }
     else {
         console.log("Invalid chart type");
@@ -81,60 +86,51 @@ const aggregateByDetectionMethod = (data) => {
 
     return aggregatedData;
 }
+const filterDataByJurisdictionBar = (data) => {
+    selectedJurisdictions = getCheckedValues("#jurisdictions-bars input");
+    console.log("Selected jurisdictions for Bars: ", selectedJurisdictions);
 
-const aggregateByDetectionMethodBar = (data) => {
+    //filter data based on the selected jurisdictions
+    return data.filter(d => selectedJurisdictions.includes(d.jurisdiction));
+}
+
+const filterDataByAgeGroupBar = (data) => {
+    selectedAgeGroups = getCheckedValues("#agegroups-bars input");
+    console.log("Selected age groups for Bars: ", selectedAgeGroups);
+
+    //filter data based on the selected age groups
+    return data.filter(d => selectedAgeGroups.includes(d.age_group));
+} 
+
+const aggregateByDetectionMethodBar = (data, enforcementType) => {
     let filteredData;
-
     
-    //filter data based on the selected option
+    // Filter data based on the selected detection method
     let selectOption = document.getElementById("detection-method-bars").value;
-    console.log("Selected option bar: ", selectOption);
     if (selectOption === "all") {
         filteredData = data;
     } else {
         filteredData = data.filter(d => d.detection === selectOption);
     }
 
-    //TODO: AGGREGATE DATA BY THE SELECTED ENFORCEMENT TYPE
-
+    // Aggregate data by the selected enforcement type
     const aggregatedData = Array.from(
         d3.rollup(
             filteredData,
-            v => d3.sum(v, d => d.Total_FINES),
+            v => d3.sum(v, d => +d[enforcementType]),
             d => d.age_group,
             d => d.jurisdiction
         ),
         ([age_group, group]) =>
-            Array.from(group, ([jurisdiction, Total_FINES]) => ({
+            Array.from(group, ([jurisdiction, value]) => ({
                 age_group,
                 jurisdiction,
-                Total_FINES
+                [enforcementType]: value
             }))
     ).flat();
 
-    
-
     return aggregatedData;
-
-}
-
-const aggregatedSumByYears = (data) => {
-    //aggregate sum of data by year
-    const aggregatedData = Array.from(
-        d3.rollup(
-            data,
-            v => d3.sum(v, d => d.fines_total),
-            d => d.year
-        ),
-        ([year, fines_total]) => ({
-            year,
-            fines_total
-        })
-    );
-
-    aggregatedData.sort((a, b) => d3.ascending(a.year, b.year));
-    return aggregatedData;
-}
+};
 
 const filterDataByYears = (data) => {
     const startYear = parseInt(document.getElementById("from-lines").value);
@@ -215,7 +211,7 @@ const aggregateByLocationAndAgeGroup = (data) => {
 
 const populateBarChartFilters = (data) => {
     const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
-    const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction))); // Ensure jurisdictions is initialized
+    const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction)));
 
     //TODO: add detection method filter
     //TODO: add jurisdiction filter
@@ -239,22 +235,6 @@ const populateBarChartFilters = (data) => {
             </div>`
         );
     });
-}
-
-const filterDataByJurisdictionBar = (data) => {
-    selectedJurisdictions = getCheckedValues("#jurisdictions-bars input");
-    console.log("Selected jurisdictions for Bars: ", selectedJurisdictions);
-
-    //filter data based on the selected jurisdictions
-    return data.filter(d => selectedJurisdictions.includes(d.jurisdiction));
-}
-
-const filterDataByAgeGroupBar = (data) => {
-    selectedAgeGroups = getCheckedValues("#agegroups-bars input");
-    console.log("Selected age groups for Bars: ", selectedAgeGroups);
-
-    //filter data based on the selected age groups
-    return data.filter(d => selectedAgeGroups.includes(d.age_group));
 }
 
 const populateHeatmapFilters = (data) => {

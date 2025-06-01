@@ -65,7 +65,7 @@ d3.csv("../data/grouped_bar_chart.csv", d => ({
     populateBarChartFilters(data);
 
     updated_data = updateData(data, "grouped_bar");
-    drawBarChart(data);
+    drawBarChart(updated_data);
 
     //listen for changes in selections
     d3.selectAll("#detection-method-bars").on("change", function() {
@@ -74,6 +74,11 @@ d3.csv("../data/grouped_bar_chart.csv", d => ({
     });
 
     d3.selectAll(".form-check-input-2-barchart").on("change", function() {
+        const updated_data = updateData(data, "grouped_bar");
+        drawBarChart(updated_data);
+    });
+
+    d3.selectAll("#enforcement-type-bars").on("change", function() {
         const updated_data = updateData(data, "grouped_bar");
         drawBarChart(updated_data);
     });
