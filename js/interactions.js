@@ -86,6 +86,26 @@ const aggregateByDetectionMethod = (data) => {
 
     return aggregatedData;
 }
+
+const aggregatedSumByYears = (data) => {
+    //aggregate sum of data by year
+    const aggregatedData = Array.from(
+        d3.rollup(
+            data,
+            v => d3.sum(v, d => d.fines_total),
+            d => d.year
+        ),
+        ([year, fines_total]) => ({
+            year,
+            fines_total
+        })
+    );
+
+    aggregatedData.sort((a, b) => d3.ascending(a.year, b.year));
+    return aggregatedData;
+}
+
+
 const filterDataByJurisdictionBar = (data) => {
     selectedJurisdictions = getCheckedValues("#jurisdictions-bars input");
     console.log("Selected jurisdictions for Bars: ", selectedJurisdictions);
@@ -131,6 +151,8 @@ const aggregateByDetectionMethodBar = (data, enforcementType) => {
 
     return aggregatedData;
 };
+
+
 
 const filterDataByYears = (data) => {
     const startYear = parseInt(document.getElementById("from-lines").value);
@@ -323,5 +345,3 @@ function getCheckedValues(selector){
         .filter(checkbox => checkbox.checked)
         .map(checkbox => checkbox.value);
 }
-
-
