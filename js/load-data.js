@@ -72,6 +72,11 @@ d3.csv("../data/grouped_bar_chart.csv", d => ({
         const updated_data = updateData(data, "grouped_bar");
         drawBarChart(updated_data);
     });
+
+    d3.selectAll(".form-check-input-2-barchart").on("change", function() {
+        const updated_data = updateData(data, "grouped_bar");
+        drawBarChart(updated_data);
+    });
 }).catch(error => {
     console.error("Error loading barchart csv file:", error);
 });

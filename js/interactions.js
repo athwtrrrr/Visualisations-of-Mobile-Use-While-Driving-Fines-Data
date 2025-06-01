@@ -33,9 +33,14 @@ const updateData = (data, chart) => {
     }
     else if (chart === "grouped_bar"){
         //TODO: FILTER FIRST, AGGREGATE LATER
-        const aggregatedByDetectionMethod = aggregateByDetectionMethodBar(data);
-
-        return aggregatedByDetectionMethod;
+        d3.selectAll(".dropdown-checkbox").style("display", "block");
+    
+        // Filter first, then aggregate
+        const filteredData = filterDataByJurisdictionBar(data);
+        const filteredByAge = filterDataByAgeGroupBar(filteredData);
+        const aggregatedData = aggregateByDetectionMethodBar(filteredByAge);
+    
+        return aggregatedData;
     }
     else {
         console.log("Invalid chart type");
@@ -210,6 +215,7 @@ const aggregateByLocationAndAgeGroup = (data) => {
 
 const populateBarChartFilters = (data) => {
     const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
+    const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction))); // Ensure jurisdictions is initialized
 
     //TODO: add detection method filter
     //TODO: add jurisdiction filter
@@ -217,12 +223,38 @@ const populateBarChartFilters = (data) => {
     ageGroups.forEach(a => {
         d3.select("#agegroups-bars").append("li").html(`
                 <div class="form-check dropdown-item">
-                    <input class="form-check-input-2-heatmap" type="checkbox" value="${a}" id="${a}" checked>
+                    <input class="form-check-input-2-barchart" type="checkbox" value="${a}" id="${a}" checked>
                     <label class="form-check-label" for="${a}">${a}</label>
                 </div>
             `
-        )
-    })
+        );
+    });
+
+    // Populate jurisdictions
+    jurisdictions.forEach(j => {
+        d3.select("#jurisdictions-bars").append("li").html(`
+            <div class="form-check dropdown-item">
+                <input class="form-check-input-2-barchart" type="checkbox" value="${j}" id="${j}" checked>
+                <label class="form-check-label" for="${j}">${j}</label>
+            </div>`
+        );
+    });
+}
+
+const filterDataByJurisdictionBar = (data) => {
+    selectedJurisdictions = getCheckedValues("#jurisdictions-bars input");
+    console.log("Selected jurisdictions for Bars: ", selectedJurisdictions);
+
+    //filter data based on the selected jurisdictions
+    return data.filter(d => selectedJurisdictions.includes(d.jurisdiction));
+}
+
+const filterDataByAgeGroupBar = (data) => {
+    selectedAgeGroups = getCheckedValues("#agegroups-bars input");
+    console.log("Selected age groups for Bars: ", selectedAgeGroups);
+
+    //filter data based on the selected age groups
+    return data.filter(d => selectedAgeGroups.includes(d.age_group));
 }
 
 const populateHeatmapFilters = (data) => {
