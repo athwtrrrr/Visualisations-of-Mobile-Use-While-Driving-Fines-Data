@@ -123,8 +123,20 @@
                 </button>
                 <ul class="dropdown-menu" id="agegroups-bars" aria-labelledby="dropdownMenuCheckbox"></ul>
             </div>
-            <!--TODO: ADD JURISDICTION CHECKBOX DROPDOWN MENU-->
-            <!--TODO: ADD ENFORCEMENT TYPE DROPDOWN MENU-->
+            <div class="dropdown-checkbox">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuCheckbox" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Jurisdictions
+                </button>
+                <ul class="dropdown-menu" id="jurisdictions-bars" aria-labelledby="dropdownMenuCheckbox"></ul>
+            </div>
+            <div id="enforcement-type-bar" class="dropdown">
+                <label for="enforcement-type-bars">Select Enforcement Type:</label>
+                <select id="enforcement-type-bars">
+                    <option value="Total_FINES" selected>Fines</option>
+                    <option value="Total_ARRESTS">Arrests</option>
+                    <option value="Total_CHARGES">Charges</option>
+                </select>
+            </div>
         </div>
         
         <div id="barchart" class="visualisation-placeholder"></div>
