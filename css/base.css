@@ -25,9 +25,10 @@ body {
 }
 
 .navbar-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
     margin-right: 20px; /* Space between logo and title */
+    margin-left: 5%;
 }
 
 .navbar-title {
@@ -35,8 +36,8 @@ body {
     font-weight: bold;
     color: #000000;
     margin: 0;
-    flex-grow: 1; /* Pushes title to take available space */
-    padding-left:30%;
+    flex-grow: 1; 
+    padding-left:20%;
 }
 
 .navbar-links {
@@ -189,7 +190,15 @@ body {
     padding-left: 25px;
     position: relative;
     line-height: 1.7;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+}
+
+.visualisation-section li {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.3;
+    font-size: 1.1rem;
 }
 /* Visualization Placeholders */
 .visualisation-placeholder {
