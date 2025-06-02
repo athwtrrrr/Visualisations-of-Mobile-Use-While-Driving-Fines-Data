@@ -6,7 +6,7 @@ const drawBarChart = (data) => {
     // Reset the chart
     d3.select("#barchart").select("svg").remove();
 
-    const margin = {top: 60, right: 120, bottom: 50, left: 45};
+    const margin = {top: 60, right: 120, bottom: 50, left: 80};
     const width = 800;
     const height = 600;
     const innerWidth = width - margin.left - margin.right;
@@ -70,13 +70,17 @@ const drawBarChart = (data) => {
 
             const bar = jurGroup.append("rect")
                 .attr("x", xScaleH(ageGroup))
-                .attr("y", yScaleL(value))
+                .attr("y", yScaleL(0)) 
                 .attr("width", xScaleH.bandwidth())
-                .attr("height", innerHeight - yScaleL(value))
+                .attr("height", 0) 
                 .attr("fill", colorScaleL(ageGroup))
                 .attr("stroke", "#fff")
                 .attr("stroke-width", 1)
-            
+                .transition()
+                .duration(700)
+                .attr("y", yScaleL(value))
+                .attr("height", innerHeight - yScaleL(value))
+                .selection();
 
             // Mouseover event for tooltip
             bar.on("mouseover", function(event) {
@@ -131,15 +135,18 @@ const drawBarChart = (data) => {
 
     // Update y-axis label based on enforcement type
     svg.append("text")
-        .text(enforcementLabel)
+        .text(`Total Number of ${enforcementLabel}`)
         .attr("x", 0)
         .attr("y", 40)
-        .attr("class", "axis-label");
+        .attr("text-anchor", "middle")
+        .attr("transform", `rotate(-90)`)
+        .attr("x", -height / 2)
+        .attr("y", 20);
 
 
     // Legend
     const legend = svg.append("g")
-        .attr("transform", `translate(${width - margin.right - 100}, ${margin.top})`);
+        .attr("transform", `translate(${width - margin.right}, ${margin.top})`);
 
     ageGroups.forEach((ageGroup, i) => {
         const legendItem = legend.append("g")
@@ -156,12 +163,30 @@ const drawBarChart = (data) => {
             .attr("font-size", "12px")
             .text(ageGroup);
     });
-// Update chart title
-svg.append("text")
-.attr("x", width / 2)
-.attr("y", 30)
-.attr("text-anchor", "middle")
-.attr("class", "title")
-.text(`${enforcementLabel} by Jurisdiction and Age Group`);
+
+    //label the bars
+    innerChart.selectAll(".bar-label")
+        .data(data)
+        .enter()
+        .append("text")
+        .attr("class", "bar-label")
+        .attr("x", d => xScaleL(d.jurisdiction) + xScaleH(d.age_group) + xScaleH.bandwidth() / 2)
+        .attr("y", d => yScaleL(+d[enforcementType]) - 5)
+        .attr("text-anchor", "middle")
+        .text(d => (+d[enforcementType]).toLocaleString())
+        .style("font-size", "10px")
+        .style("fill", "#333")
+        .style("opacity", 0)
+        .transition()
+        .duration(800)
+        .style("opacity", 1);
+
+    // Update chart title
+    svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", 30)
+    .attr("text-anchor", "middle")
+    .attr("class", "title")
+    .text(`${enforcementLabel} by Jurisdiction and Age Group in 2023`);
 };
 

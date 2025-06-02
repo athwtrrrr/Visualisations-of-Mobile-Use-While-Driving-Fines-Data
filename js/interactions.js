@@ -235,10 +235,18 @@ const populateBarChartFilters = (data) => {
     const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
     const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction)));
 
-    //TODO: add detection method filter
-    //TODO: add jurisdiction filter
-
     ageGroups.forEach(a => {
+        if (a === "Unknown"){
+            d3.select("#agegroups-bars").append("li").html(`
+                <div class="form-check dropdown-item">
+                    <input class="form-check-input-2-barchart" type="checkbox" value="${a}" id="${a}">
+                    <label class="form-check-label" for="${a}">${a}</label>
+                </div>
+            `
+        );
+        return;
+        }
+
         d3.select("#agegroups-bars").append("li").html(`
                 <div class="form-check dropdown-item">
                     <input class="form-check-input-2-barchart" type="checkbox" value="${a}" id="${a}" checked>
@@ -286,7 +294,7 @@ const populateHeatmapFilters = (data) => {
         )
     });
 
-    ageGroups.forEach(a => {
+    ageGroups.forEach(a => {  
         d3.select("#agegroups").append("li").html(`
                 <div class="form-check dropdown-item">
                     <input class="form-check-input-2-heatmap" type="checkbox" value="${a}" id="${a}" checked>

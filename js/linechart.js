@@ -2,7 +2,7 @@ const drawLineChart = (data) => {
     //reset the chart
     d3.select("#linechart").select("svg").remove();
 
-    const margin = {top: 60, right: 120, bottom: 30, left: 45};
+    const margin = {top: 60, right: 120, bottom: 30, left: 80};
     const width = 800;
     const height = 600;
     const innerWidth = width - margin.left - margin.right;
@@ -179,9 +179,11 @@ const drawLineChart = (data) => {
     svg
         .append("text")
         .text("Total Number of Fines")
-            .attr("x", 0)
-            .attr("y", 40)
-            .attr("class", "axis-label");
+        .attr("class", "axis-label")
+        .attr("text-anchor", "middle")
+        .attr("transform", `rotate(-90)`)
+        .attr("x", -height / 2)
+        .attr("y", 20);
 
     const selectOption = document.getElementById("detection-method").value;
     const selectedStartYear = document.getElementById("from-lines").value;

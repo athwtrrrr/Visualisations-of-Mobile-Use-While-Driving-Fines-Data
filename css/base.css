@@ -94,7 +94,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 600px;
+    max-width: 1000px;
     animation: fadeInUp 1s ease-out;
 }
 
@@ -194,8 +194,6 @@ body {
 }
 
 .visualisation-section li {
-    margin-bottom: 20px;
-    padding-left: 25px;
     position: relative;
     line-height: 1.3;
     font-size: 1.1rem;
