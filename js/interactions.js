@@ -3,7 +3,7 @@ const updateData = (data, chart) => {
         const viewby = document.getElementById("view-by").value;
 
         if (viewby === "By Jurisdictions") {
-            d3.selectAll(".dropdown-checkbox").style("display", "block");
+            d3.selectAll(".lines-dropdown-checkbox").style("display", "block");
             const filteredYearData = filterDataByYears(data);
             const filteredJurisdictionData = filterDataByJurisdiction(filteredYearData);
             const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredJurisdictionData);
@@ -12,7 +12,7 @@ const updateData = (data, chart) => {
             return aggregatedByDetectionMethod;
         }
         else if (viewby === "All Australia") {
-            d3.selectAll(".dropdown-checkbox").style("display", "none");    //hide the jurisdiction filters
+            d3.selectAll(".lines-dropdown-checkbox").style("display", "none");    //hide the jurisdiction filters
             const filteredYearData = filterDataByYears(data);
             const aggregatedByDetectionMethod = aggregateByDetectionMethod(filteredYearData);
             const aggregatedSumYearsData= aggregatedSumByYears(aggregatedByDetectionMethod);
