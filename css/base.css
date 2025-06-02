@@ -174,9 +174,9 @@ body {
 .content p, 
 .visualisation-section p {
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 1.7;
     color: #444;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 /* Lists */
@@ -195,7 +195,7 @@ body {
 
 .visualisation-section li {
     position: relative;
-    line-height: 1.3;
+    line-height: 1.7;
     font-size: 1.1rem;
 }
 /* Visualization Placeholders */
