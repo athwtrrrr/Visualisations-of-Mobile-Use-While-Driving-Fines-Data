@@ -170,7 +170,10 @@ const aggregateByLocationAndAgeGroup = (data) => {
 }
 
 const populateHeatmapFilters = (data) => {
-    const months = Array.from(new Set(data.map(d => d.month)));
+    const monthOrder = ["January", "February", "March", "April", "May", "June", 
+        "July", "August", "September", "October", "November", "December"];
+    const months = Array.from(new Set(data.map(d => d.month)))
+    .sort((a, b) => monthOrder.indexOf(a) - monthOrder.indexOf(b));
     const jurisdictions = Array.from(new Set(data.map(d => d.jurisdiction)));
     const ageGroups = Array.from(new Set(data.map(d => d.age_group)));
     const locations = Array.from(new Set(data.map(d => d.location)));
